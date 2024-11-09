@@ -60,3 +60,19 @@ p {
     color: #ff5e57;
     font-weight: bold;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ff5e57;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 0;
+}
