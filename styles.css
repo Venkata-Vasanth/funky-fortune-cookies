@@ -1,0 +1,62 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #fdf0e3;
+    text-align: center;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 500px;
+    padding: 20px;
+    background-color: #ffe3c0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #d87c5a;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.fortune-cookie {
+    position: relative;
+    cursor: pointer;
+}
+
+#cookie {
+    width: 150px;
+    transition: transform 0.3s;
+}
+
+#cookie:hover {
+    transform: scale(1.1);
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+
+#fortune-text {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #ff5e57;
+    font-weight: bold;
+}
