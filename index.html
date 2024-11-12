@@ -7,20 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Funky Fortune Cookies</h1>
-    <div id="fortune-container">
-        <img id="cookie" src="cookie.png" alt="Fortune Cookie" onclick="showFortune()" style="cursor: pointer;">
-        <p id="fortune-text"></p>
+    <!-- Main container that holds everything -->
+    <div class="main-container">
+        <!-- Title -->
+        <h1>Funky Fortune Cookies</h1>
+        
+        <!-- Container for fortune cookie image and fortune text -->
+        <div class="container">
+            <div id="fortune-container">
+                <div class="fortune-cookie">
+                    <img id="cookie" src="cookie.png" alt="Fortune Cookie" onclick="showFortune()">
+                </div>
+                <p id="fortune-text"></p>
+            </div>
+            
+            <!-- Daily challenge section -->
+            <div id="challenge-container">
+                <h3>Daily Challenge</h3>
+                <p id="challenge-text"></p>
+            </div>
+        </div>
+        
+        <!-- Footer with credits -->
+        <footer>
+            <p>Created by Venkata Vasanth Sunkara</p>
+        </footer>
     </div>
-    <div id="challenge-container">
-        <h3>Daily Challenge</h3>
-        <p id="challenge-text"></p>
-    </div>
-    
-    <footer>
-        <p>Created by Venkata Vasanth Sunkara</p>
-    </footer>
-    
 
     <script src="fortunes.js" defer></script>
     <script src="script.js" defer></script>
