@@ -1,105 +1,202 @@
-/* General Styles */
+/* General body styling */
 body {
     font-family: 'Comic Sans MS', sans-serif;
     background-color: #fdf0e3;
+    text-align: center;
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    overflow: hidden; /* Prevent scrollbars */
-    flex-direction: column; /* Stack items vertically */
-}
-
-/* Main container */
-.main-container {
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the content horizontally */
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+/* Top Bar for theme, streak, and points */
+.top-bar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: auto;
+    z-index: 10;
+}
+
+.top-bar select, .top-bar p, .top-bar h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Theme Selector Styling */
+#theme-selector {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #d87c5a;
+    background-color: #fff;
+}
+
+/* Main Container Styling */
+.main-container {
+    margin-top: 80px; /* Ensures it is not overlapped by the top bar */
     width: 100%;
-    max-width: 600px; /* Maximum width of the main container */
-    padding: 30px;
-    background-color: #ffe3c0;
-    border-radius: 12px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
-    text-align: center;
+    max-width: 500px; /* Control the max width for better readability */
+    padding: 20px;
+    background-color: #B3E0FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-/* Title */
-h1 {
-    font-size: 2.2rem;
-    color: #d87c5a;
-    margin-bottom: 20px;
+/* Fortune Cookie Section Styling */
+#fortune-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Fortune and Challenge Text */
-#fortune-text, #challenge-text {
-    margin-top: 20px;
-    font-size: 1.4rem;
-    color: #ff5e57;
-    font-weight: bold;
-}
-
-/* Fortune Cookie Image */
 .fortune-cookie {
-    position: relative;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    margin-bottom: 10px;
 }
 
 #cookie {
     width: 150px;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s;
 }
 
 #cookie:hover {
-    transform: scale(1.1) rotate(10deg);
+    transform: scale(1.1);
 }
 
-/* Shake Animation */
-@keyframes shake {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(-5deg); }
-    75% { transform: rotate(5deg); }
-}
-
-.shake {
-    animation: shake 0.5s;
-}
-
-/* Footer */
-footer {
-    width: 100%;
-    background-color: #d87c5a;
-    color: #ffffff;
-    text-align: center;
-    padding: 12px;
+/* Buttons for reactions */
+#reaction-buttons button {
+    background-color: #ff5e57;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 1rem;
-    font-weight: bold;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#reaction-buttons button:hover {
+    background-color: #d87c5a;
+}
+
+#share-button {
+    background-color: #f77f00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
     margin-top: 20px;
 }
 
-footer p {
+#share-button:hover {
+    background-color: #b35900;
+}
+
+/* Daily Challenge Section */
+#challenge-container {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #FFB3E6;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+}
+
+#challenge-container h3 {
+    font-size: 1.3rem;
+    color: #ff5e57;
+}
+
+#challenge-text {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Points Display Section */
+#points-display {
+    margin-top: 20px;
+    background-color: #ff5e57;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 250px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#points-display h3 {
     margin: 0;
 }
 
-/* Responsive Design for smaller screens */
-@media screen and (max-width: 600px) {
-    .main-container {
-        padding: 20px;
+#fortune-text {
+    color: #2E2E2E;
+    font-size: 1.5rem;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ff5e57;
+    color: white;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    h1 {
-        font-size: 1.8rem;
+
+    .top-bar select {
+        font-size: 0.9rem;
     }
+
     #cookie {
         width: 120px;
     }
-    #fortune-text, #challenge-text {
-        font-size: 1.2rem;
+
+    #points-display {
+        max-width: 200px;
+    }
+
+    #challenge-container {
+        max-width: 250px;
+    }
+
+    #reaction-buttons button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    #share-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
     }
 }
+
