@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Funky Fortune Cookies</h1>
-        <p>Click the fortune cookie to reveal your fortune!</p>
-        <div class="fortune-cookie" onclick="generateFortune()">
-            <img src="cookie.png" alt="Fortune Cookie" id="cookie">
-            <div id="fortune-text">Your fortune will appear here...</div>
-        </div>
+    <h1>Funky Fortune Cookies</h1>
+    <div id="fortune-container">
+        <img id="cookie" src="cookie.png" alt="Fortune Cookie" onclick="showFortune()" style="cursor: pointer;">
+        <p id="fortune-text"></p>
+    </div>
+    <div id="challenge-container">
+        <h3>Daily Challenge</h3>
+        <p id="challenge-text"></p>
     </div>
     
     <footer>
@@ -21,6 +22,7 @@
     </footer>
     
 
-    <script src="script.js"></script>
+    <script src="fortunes.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
