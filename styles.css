@@ -1,8 +1,8 @@
 /* General body styling */
 body {
     font-family: 'Comic Sans MS', sans-serif;
-    background-color: #fdf0e3;
     text-align: center;
+    background-color: #fdf0e3;
     color: #333;
     margin: 0;
     padding: 0;
@@ -16,8 +16,8 @@ body {
 /* Top Bar for theme, streak, and points */
 .top-bar {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 7px;
+    /* right: 10px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,11 +49,16 @@ body {
     width: 100%;
     max-width: 500px; /* Control the max width for better readability */
     padding: 20px;
-    background-color: #B3E0FF;
+    background-color: #ffe3c0;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+#title {
+    font-size: 2rem;
+    color: #d87c5a;
 }
 
 /* Fortune Cookie Section Styling */
@@ -114,7 +119,7 @@ body {
 #challenge-container {
     margin-top: 30px;
     padding: 15px;
-    background-color: #FFB3E6;
+    background-color: #d87c5a;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -123,10 +128,11 @@ body {
 
 #challenge-container h3 {
     font-size: 1.3rem;
-    color: #ff5e57;
+    color: #ffffff;
 }
 
 #challenge-text {
+    color: #ffecec;
     font-size: 1.1rem;
     margin-top: 10px;
 }
@@ -148,7 +154,7 @@ body {
 }
 
 #fortune-text {
-    color: #2E2E2E;
+    color: #ff5e57;
     font-size: 1.5rem;
 }
 
@@ -158,7 +164,7 @@ footer {
     padding: 10px;
     background-color: #ff5e57;
     color: white;
-    font-size: 2rem;
+    font-size: 1.7rem;
     width: 100%;
     text-align: center;
     position: fixed;

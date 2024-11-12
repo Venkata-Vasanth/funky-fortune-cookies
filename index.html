@@ -7,33 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top bar for theme selector, streak, and points -->
-    <div class="top-bar">
-        <label for="theme-selector">Choose Your Fortune Theme:</label>
-        <select id="theme-selector">
-            <option value="general">General</option>
-            <option value="love">Love</option>
-            <option value="career">Career</option>
-            <option value="motivation">Motivation</option>
-            <option value="creativity">Creativity</option>
-            <option value="relaxation">Relaxation</option>
-            <option value="focus">Focus</option>
-            <option value="wellness">Wellness</option>
-            <option value="adventure">Adventure</option>
-            <option value="positivity">Positivity</option>
-        </select>
-        
-
-        <p id="streak-display">Streak: 0</p>
-        
-        <div id="points-display">
-            <h3>Your Points: <span id="points-count">0</span></h3>
-        </div>
-    </div>
 
     <!-- Main container for the fortune cookie content -->
     <div class="main-container">
-        <h1>Funky Fortune Cookies</h1>
+        <h1 id="title">Funky Fortune Cookies</h1>
 
         <!-- Container for fortune cookie image and fortune text -->
         <div id="fortune-container" class="fortune-container">
@@ -54,6 +31,29 @@
         <div id="challenge-container">
             <h3>Daily Challenge</h3>
             <p id="challenge-text"></p>
+        </div>
+    </div>
+        <!-- bottom bar for theme selector, streak, and points -->
+    <div class="top-bar">
+        <label for="theme-selector">Choose Your Fortune Theme:</label>
+        <select id="theme-selector">
+            <option value="general">General</option>
+            <option value="love">Love</option>
+            <option value="career">Career</option>
+            <option value="motivation">Motivation</option>
+            <option value="creativity">Creativity</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="focus">Focus</option>
+            <option value="wellness">Wellness</option>
+            <option value="adventure">Adventure</option>
+            <option value="positivity">Positivity</option>
+        </select>
+        
+
+        <p id="streak-display">Streak: 0</p>
+        
+        <div id="points-display">
+            <h3>Your Points: <span id="points-count">0</span></h3>
         </div>
     </div>
 

@@ -124,16 +124,16 @@ document.getElementById('theme-selector').addEventListener('change', function ()
 
     // Define background colors for each theme
     const themeColors = {
-        general: '#cce7ff',      // Light blue (modern and calming, Gen Z-friendly)
-        love: '#f8b0b0',         // Soft blush pink (more lively)
-        career: '#a7c8ff',       // Light sky blue (calming and professional)
-        motivation: '#b3f0b3',   // Mint green (refreshing and energizing)
-        creativity: '#f0c9ff',   // Soft lavender (inspiring and artistic)
-        relaxation: '#e2f7f4',   // Soft teal (calming and peaceful)
-        focus: '#fffae1',        // Soft yellow (uplifting and motivating)
-        wellness: '#e0ffd5',     // Light lime green (fresh and healthy)
-        adventure: '#ffcc99',    // Warm coral (exciting and dynamic)
-        positivity: '#ffed8b',   // Sunshine yellow (bright and optimistic)
+        general: '#fdf0e3',      
+        love: '#f8b0b0',
+        career: '#a7c8ff',
+        motivation: '#b3f0b3',
+        creativity: '#f0c9ff',
+        relaxation: '#e2f7f4',
+        focus: '#fffae1',
+        wellness: '#e0ffd5',
+        adventure: '#ffcc99',
+        positivity: '#ffed8b',
     };
 
 
