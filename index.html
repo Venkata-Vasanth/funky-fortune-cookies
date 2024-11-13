@@ -4,62 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funky Fortune Cookies</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-light">
 
-    <!-- Main container for the fortune cookie content -->
-    <div class="main-container">
-        <h1 id="title">Funky Fortune Cookies</h1>
-
-        <!-- Container for fortune cookie image and fortune text -->
-        <div id="fortune-container" class="fortune-container">
-            <div class="fortune-cookie">
-                <img id="cookie" src="cookie.png" alt="Fortune Cookie" onclick="showFortune()">
+    <!-- Top Bar for Theme Selector, Streak, and Points -->
+    <div class="top-bar container-fluid bg-secondary text-white py-2">
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+            <div class="form-inline">
+                <label for="theme-selector" class="mr-2">Choose Your Fortune Theme:</label>
+                <select id="theme-selector" class="form-control">
+                    <option value="general">General</option>
+                    <option value="love">Love</option>
+                    <option value="career">Career</option>
+                    <option value="motivation">Motivation</option>
+                    <option value="creativity">Creativity</option>
+                    <option value="relaxation">Relaxation</option>
+                    <option value="focus">Focus</option>
+                    <option value="wellness">Wellness</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="positivity">Positivity</option>
+                </select>
             </div>
-            <p id="fortune-text">Your fortune will appear here.</p>
 
-            <div id="reaction-buttons">
-                <button id="like-button">👍 Like</button>
-                <button id="save-button">💾 Save</button>
+            <p id="streak-display" class="mb-0">Streak: 0</p>
+            <div id="points-display">
+                <h6>Your Points: <span id="points-count">0</span></h6>
             </div>
-            
-            <button id="share-button">Share Your Fortune</button>
-        </div>
-
-        <!-- Daily challenge section -->
-        <div id="challenge-container">
-            <h3>Daily Challenge</h3>
-            <p id="challenge-text"></p>
         </div>
     </div>
-        <!-- bottom bar for theme selector, streak, and points -->
-    <div class="top-bar">
-        <label for="theme-selector">Choose Your Fortune Theme:</label>
-        <select id="theme-selector">
-            <option value="general">General</option>
-            <option value="love">Love</option>
-            <option value="career">Career</option>
-            <option value="motivation">Motivation</option>
-            <option value="creativity">Creativity</option>
-            <option value="relaxation">Relaxation</option>
-            <option value="focus">Focus</option>
-            <option value="wellness">Wellness</option>
-            <option value="adventure">Adventure</option>
-            <option value="positivity">Positivity</option>
-        </select>
-        
 
-        <p id="streak-display">Streak: 0</p>
-        
-        <div id="points-display">
-            <h3>Your Points: <span id="points-count">0</span></h3>
+    <!-- Main container for the fortune cookie content -->
+    <div class="main-container container my-4">
+        <h1 id="title" class="text-center text-primary">Funky Fortune Cookies</h1>
+
+        <!-- Fortune Cookie and Text -->
+        <div id="fortune-container" class="fortune-container bg-white p-4 rounded shadow-sm text-center">
+            <div class="fortune-cookie mb-3">
+                <img id="cookie" src="cookie.png" alt="Fortune Cookie" onclick="showFortune()" class="img-fluid">
+            </div>
+            <p id="fortune-text" class="font-weight-bold text-secondary">Your fortune will appear here.</p>
+
+            <!-- Reaction Buttons -->
+            <div id="reaction-buttons" class="mb-2">
+                <button id="like-button" class="btn btn-outline-primary mr-2">👍 Like</button>
+                <button id="save-button" class="btn btn-outline-info">💾 Save</button>
+            </div>
+            
+            <button id="share-button" class="btn btn-primary mt-2">Share Your Fortune</button>
+        </div>
+
+        <!-- Daily Challenge Section -->
+        <div id="challenge-container" class="mt-4 p-4 rounded shadow-sm bg-warning text-dark text-center">
+            <h3>Daily Challenge</h3>
+            <p id="challenge-text">Complete today’s challenge for extra points!</p>
         </div>
     </div>
 
     <!-- Footer with credits -->
-    <footer>
-        <p>Created by Venkata Vasanth Sunkara</p>
+    <footer class="text-center py-3 bg-dark text-white">
+        <p class="mb-0">Created by Venkata Vasanth Sunkara</p>
     </footer>
 
     <!-- Sound Effects -->
@@ -69,6 +76,9 @@
     <!-- Background Music -->
     <audio id="background-music" src="sounds/background-music.mp3" loop></audio>
 
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="fortunes.js" defer></script>
     <script src="script.js" defer></script>
 </body>
