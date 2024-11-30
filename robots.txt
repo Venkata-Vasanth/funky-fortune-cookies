@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://funkyfurtunecookies.netlify.app/sitemap.xml

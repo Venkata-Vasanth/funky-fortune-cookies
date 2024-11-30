@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funky Fortune Cookies</title>
-
+    <title>Funky Fortune Cookies - Get Your Daily Fortune!</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get your daily dose of wisdom and fun with our Funky Fortune Cookies! Crack open a virtual fortune cookie for inspiring messages, daily challenges, and positive vibes.">
+    <meta name="keywords" content="fortune cookies, daily fortune, wisdom, fun, virtual fortune, daily challenge">
+    <meta name="author" content="Venkata Vasanth Sunkara">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://funkyfurtunecookies.netlify.app/">
+    <meta property="og:title" content="Funky Fortune Cookies - Daily Wisdom">
+    <meta property="og:description" content="Crack open a virtual fortune cookie for your daily dose of wisdom and fun!">
+    <meta property="og:image" content="cookie.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://funkyfurtunecookies.netlify.app/">
+    <meta property="twitter:title" content="Funky Fortune Cookies - Daily Wisdom">
+    <meta property="twitter:description" content="Crack open a virtual fortune cookie for your daily dose of wisdom and fun!">
+    <meta property="twitter:image" content="cookie.png">
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#d87c5a">
+    <link rel="icon" type="image/png" href="cookie.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <!-- Main container for the fortune cookie content -->
     <div class="main-container container my-4">
         <h1 id="title" class="text-center text-primary">Funky Fortune Cookies</h1>
@@ -32,14 +58,14 @@
         </div>
 
         <!-- Daily Challenge Section -->
-        <div id="challenge-container" class="mt-4 p-4 rounded shadow-sm bg-warning text-dark text-center">
+        <div id="challenge-container" class="mt-4 p-4 rounded shadow-sm text-dark text-center">
             <h3>Daily Challenge</h3>
-            <p id="challenge-text">Complete today’s challenge for extra points!</p>
+            <p id="challenge-text">Complete today's challenge for extra points!</p>
         </div>
     </div>
 
     <!-- Footer with credits -->
-    <footer class="text-center py-3 bg-dark text-white">
+    <footer class="text-center py-3 text-white">
         <p class="mb-0">Created by Venkata Vasanth Sunkara</p>
     </footer>
 
