@@ -145,17 +145,28 @@ body {
 
 /* Challenge Container */
 #challenge-container {
-    margin-top: 2rem;
+    margin: 2rem auto;
     padding: 1.5rem;
     border-radius: 15px;
     background: linear-gradient(135deg, #ffd700, #ffa500);
     box-shadow: var(--shadow);
     color: white;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
 }
 
 #challenge-container h3 {
     margin-bottom: 1rem;
     font-size: 1.3rem;
+    text-align: center;
+}
+
+#challenge-text {
+    color: #ffecec;
+    font-size: 1.1rem;
+    margin: 10px auto;
+    text-align: center;
 }
 
 /* Points Display Section */
@@ -206,13 +217,6 @@ footer {
 
 .fortune-cookie {
     animation: float 3s ease-in-out infinite;
-}
-
-/* Daily Challenge Section */
-#challenge-text {
-    color: #ffecec;
-    font-size: 1.1rem;
-    margin-top: 10px;
 }
 
 /* Share Button */
